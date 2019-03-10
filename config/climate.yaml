@@ -1,0 +1,24 @@
+# ***************************************
+#  Hysen Termostat Bathroom Floor
+#  192.168.07.44
+#  75:1a:xx:yy:zz:ww
+# ***************************************
+- platform: hysenheating
+  name: Bathroom
+  host: 192.168.07.44
+  mac: '75:1a:xx:yy:zz:ww'
+  timeout: 10
+  scan_interval: 10
+  
+# ***************************************
+#  Hysen Termostat Boiler
+#  192.168.07.37
+#  75:e4:xx:yy:zz:ww
+# ***************************************
+- platform: hysenheating
+  name: Boiler
+  host: 192.168.07.37
+  mac: '75:e4:xx:yy:zz:ww'
+  timeout: 10
+  scan_interval: 10
+  
