@@ -25,7 +25,7 @@ HYSEN_HEAT_MANUAL_OVER_AUTO_OFF = 0
 HYSEN_HEAT_MANUAL_OVER_AUTO_ON  = 1
 
 HYSEN_HEAT_MODE_MANUAL          = 0
-HYSEN_HEAT_MODE_AUTO            = 3
+HYSEN_HEAT_MODE_AUTO            = 1
 
 HYSEN_HEAT_SCHEDULE_12345_67    = 1
 HYSEN_HEAT_SCHEDULE_123456_7    = 2
@@ -313,7 +313,7 @@ class HysenHeatingDevice(device):
         self.get_device_status()
         self.set_lock_power(
             self.remote_lock, 
-            power_state | (self.powerstate & 0xFE))
+            power_state | (self.power_state & 0xFE))
 
     # set target temperature
     # 0x01,0x06,0x00,0x01,0x00, Tt
