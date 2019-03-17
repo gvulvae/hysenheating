@@ -219,6 +219,7 @@ ATTR_KEY_LOCK             = 'key_lock'
 ATTR_VALVE_STATE          = 'valve_state'
 ATTR_POWER_STATE          = 'power_state'
 ATTR_MANUAL_OVER_AUTO     = 'manual_over_auto'
+ATTR_ROOM_TEMP            = 'room_temp'
 ATTR_SENSOR               = 'sensor'
 ATTR_EXTERNAL_TEMP        = 'external_temp'
 ATTR_EXTERNAL_TARGET_TEMP = 'external_limit_temp'
@@ -540,6 +541,7 @@ class HysenHeating(ClimateDevice):
                 ATTR_POWER_STATE: str(HYSEN_POWER_STATE_TO_HASS[self._hysen_device.power_state]),
                 ATTR_MANUAL_OVER_AUTO: str(HYSEN_MANUAL_OVER_AUTO_TO_HASS[self._hysen_device.manual_over_auto]),
                 ATTR_SENSOR: str(HYSEN_SENSOR_TO_HASS[self._hysen_device.sensor]),
+                ATTR_ROOM_TEMP: float(self._hysen_device.room_temp),
                 ATTR_EXTERNAL_TEMP: float(self._hysen_device.external_temp),
                 ATTR_EXTERNAL_TARGET_TEMP: float(self._hysen_device.external_limit_temp),
                 ATTR_HYSTERESIS: int(self._hysen_device.hysteresis),
