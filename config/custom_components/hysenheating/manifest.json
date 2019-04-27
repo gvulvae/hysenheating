@@ -1,0 +1,8 @@
+{
+  "domain": "your_domain_name",
+  "name": "hysenheating",
+  "documentation": "https://github.com/uspass/hysenheating/blob/master/README.md",
+  "dependencies": [],
+  "codeowners": ["@uss"],
+  "requirements": ["broadlink==0.9.0"]
+}
